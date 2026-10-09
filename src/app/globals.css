@@ -29,6 +29,37 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .site-nav a, .site-nav button { padding-block: 10px; font-size: 12px; font-weight: 500; white-space: nowrap; color: #bdc9d3; }
 .site-nav a:hover { color: var(--accent); }
 .site-nav button { border: 0; background: none; cursor: default; }
+.header-background { background: #080f19; color: #f4f8fb; }
+.site-nav .nav-unavailable { padding-block: 10px; font-size: 12px; font-weight: 500; white-space: nowrap; color: #bdc9d3; }
+.site-nav a[aria-current="page"], .drawer-nav a[aria-current="page"] { color: var(--accent); }
+.menu-trigger { display: none; }
+.menu-trigger, .menu-close { width: 44px; height: 44px; flex: 0 0 44px; border: 0; border-radius: 8px; background: transparent; color: #f4f8fb; cursor: pointer; }
+.menu-trigger > span { display: flex; flex-direction: column; gap: 5px; width: 22px; margin: auto; }
+.menu-trigger i { display: block; width: 22px; height: 2px; background: currentColor; border-radius: 2px; }
+.navigation-dialog { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; overflow: hidden; background: transparent; color: #f4f8fb; transition: display 240ms allow-discrete, overlay 240ms allow-discrete; }
+.navigation-dialog::backdrop { background: #0007; transition: background 240ms ease; }
+.menu-backdrop { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: transparent; cursor: pointer; }
+.navigation-panel { position: relative; width: min(85%, 320px); height: 100%; overflow-y: auto; overscroll-behavior: contain; padding: max(20px, env(safe-area-inset-top)) 24px max(24px, env(safe-area-inset-bottom)); background: #101b25; transform: translateX(-100%); transition: transform 240ms ease; }
+.navigation-dialog[open] .navigation-panel { transform: translateX(0); }
+.menu-close { display: block; margin-left: -8px; font-size: 36px; line-height: 1; }
+.drawer-nav { display: flex; flex-direction: column; gap: 4px; margin-top: 24px; }
+.drawer-nav a, .drawer-nav .nav-unavailable { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding-block: 12px; font-size: 19px; line-height: 1.4; color: #e2eaf0; }
+.drawer-nav a:hover { color: var(--accent); }
+.drawer-nav .nav-unavailable { color: #9cabb8; }
+.nav-unavailable small { font-size: 11px; }
+@starting-style {
+  .navigation-dialog[open] .navigation-panel { transform: translateX(-100%); }
+  .navigation-dialog[open]::backdrop { background: transparent; }
+}
+@media (max-width: 1100px) {
+  .header-background .site-header { flex-wrap: nowrap; justify-content: flex-start; gap: 12px; }
+  .header-background .site-nav { display: none; }
+  .menu-trigger { display: block; align-self: flex-start; transform: translateY(calc((170px * 826 / 4120 - 44px) / 2)); }
+  .header-cta { margin-left: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .navigation-dialog, .navigation-dialog::backdrop, .navigation-panel { transition: none; }
+}
 .app-store-badge { display: block; width: auto; height: 48px; }
 .header-cta .app-store-badge { height: 40px; }
 .hero-stacked-cta { display: none; }
@@ -107,6 +138,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   .page-width { width: calc(100% - 40px); }
   .site-header { padding-block: 24px 16px; gap: 20px 12px; }
   .brand-logo { width: 145px; }
+  .menu-trigger { transform: translateY(calc((145px * 826 / 4120 - 44px) / 2)); }
   .brand-tagline { font-size: 9px; }
   .site-nav { justify-content: flex-start; flex-wrap: wrap; gap: 0 22px; }
   .site-nav a, .site-nav button { font-size: 11px; }

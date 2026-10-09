@@ -1,8 +1,5 @@
 import { ONCURVE_BASE_PATH } from "@/config/site";
-import Link from "next/link";
 import Image from "next/image";
-
-const upcomingPages = ["Clinical Data", "Privacy", "Support", "About"];
 
 const howSteps = [
   "Track your weight (manually or with Apple Health)",
@@ -178,28 +175,7 @@ function HeroCurves() {
 export default function Home() {
   return (
     <>
-      <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="dark-section">
-        <header className="site-header page-width">
-          <Link className="brand" href="/" aria-label="ONCurve home">
-            <Image
-              className="brand-logo"
-              src={`${ONCURVE_BASE_PATH}/OnCurveLogo.svg`}
-              alt="ONCurve"
-              width={4120}
-              height={826}
-              unoptimized
-            />
-            <span className="brand-tagline">Real Progress. Real Perspective.</span>
-          </Link>
-          <nav className="site-nav" aria-label="Main navigation">
-            <a href="#how-it-works">How It Works</a>
-            {upcomingPages.map((label) => (
-              <button key={label} type="button" disabled title={`${label} — coming soon`}>{label}</button>
-            ))}
-          </nav>
-          <div className="header-cta"><AppStoreBadge /></div>
-        </header>
         <main id="main-content">
           <section className="hero" aria-labelledby="hero-heading">
             <div className="hero-layout page-width">
