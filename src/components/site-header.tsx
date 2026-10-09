@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { ONCURVE_BASE_PATH } from "@/config/site";
 
 const navigation = [
-  { label: "How It Works", href: "/#how-it-works" },
+  { label: "How It Works", href: "/how-it-works/" },
   { label: "Clinical Data", href: "/clinical-sources/" },
   { label: "Privacy", href: "/privacy/" },
   { label: "Support" },
@@ -69,7 +69,7 @@ export default function SiteHeader() {
       <Link
         key={label}
         href={href}
-        aria-current={href !== "/#how-it-works" && pathname?.replace(/\/$/, "") === href.replace(/\/$/, "") ? "page" : undefined}
+        aria-current={pathname?.replace(/\/$/, "") === href.replace(/\/$/, "") ? "page" : undefined}
         onClick={inDrawer ? closeMenu : undefined}
       >{label}</Link>
     ) : (
