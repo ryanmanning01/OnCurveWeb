@@ -113,12 +113,6 @@ function HowItWorks() {
   );
 }
 
-function AppStoreBadge() {
-  return (
-    <Image className="app-store-badge" src={`${ONCURVE_BASE_PATH}/app-store-badge.svg`} alt="Download on the App Store" width={119.66407} height={40} unoptimized />
-  );
-}
-
 function HeroProductArt() {
   return (
     <div className="hero-product-art">
@@ -185,7 +179,6 @@ export default function Home() {
                   <span className="accent-heading">Real<br />Perspective.</span>
                 </h1>
                 <p className="hero-description">ONCurve helps you see your weight loss journey in context by comparing your progress to published clinical trial data for GLP-1 medications.</p>
-                <div className="hero-stacked-cta"><AppStoreBadge /></div>
                 <ul className="hero-features">
                   <li><span className="feature-icon icon-track" aria-hidden="true" /><span>Track<br />your progress</span></li>
                   <li><span className="feature-icon icon-compare" aria-hidden="true" /><span>Compare to<br />clinical trials</span></li>

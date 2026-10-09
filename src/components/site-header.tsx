@@ -47,7 +47,7 @@ export default function SiteHeader() {
       releaseScroll.current = null;
     };
     menu.showModal();
-    const desktop = window.matchMedia("(min-width: 1101px)");
+    const desktop = window.matchMedia("(min-width: 751px)");
     const onResize = () => {
       if (desktop.matches) {
         releaseScroll.current?.();
