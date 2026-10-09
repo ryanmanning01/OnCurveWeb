@@ -71,7 +71,6 @@ function HowItWorks() {
         <div className="how-layout page-width">
           <div className="how-copy">
             <div className="how-content">
-              <p className="section-eyebrow">How It Works</p>
               <h2 id="how-heading">Your progress.<br /><span>Real context.</span></h2>
               <p className="how-description">ONCurve compares your actual weight loss to published clinical trial data, so you can see how your journey lines up with real-world results.</p>
               <ol className="how-steps">

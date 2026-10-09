@@ -26,10 +26,13 @@ export default function SiteFooter() {
             <Image className="footer-logo" src={`${ONCURVE_BASE_PATH}/OnCurveLogo.svg`} alt="ONCurve" width={4120} height={826} unoptimized />
           </Link>
           <p className="footer-tagline">Real Progress. Real Perspective.</p>
+          <p className="footer-developer">Developed by FLOW UX Design LLC<br /><a href={`mailto:${ONCURVE_CONTACT_EMAIL}?subject=ONCurve%20Support`}>Support: {ONCURVE_CONTACT_EMAIL}</a></p>
         </div>
         <nav className="footer-nav" aria-label="Footer navigation">
           <EmailLink subject="ONCurve App Feedback">Send Feedback</EmailLink>
           <EmailLink subject="ONCurve Inquiry">Contact Us</EmailLink>
+          <Link href="/support/">Support</Link>
+          <Link href="/about/">About</Link>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/clinical-sources">Clinical Data &amp; Sources</Link>
         </nav>

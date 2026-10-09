@@ -10,8 +10,8 @@ const navigation = [
   { label: "How It Works", href: "/how-it-works/" },
   { label: "Clinical Data", href: "/clinical-sources/" },
   { label: "Privacy", href: "/privacy/" },
-  { label: "Support" },
-  { label: "About" },
+  { label: "Support", href: "/support/" },
+  { label: "About", href: "/about/" },
 ];
 
 export default function SiteHeader() {
