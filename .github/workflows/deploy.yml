@@ -1,13 +1,16 @@
 name: Deploy ONCurve to DreamHost
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       host_key_verified:
         description: Confirm DreamHost independently verified the pinned ED25519 fingerprint
         type: boolean
         required: true
-        default: false
+        default: true
 
 permissions:
   contents: read
@@ -26,6 +29,9 @@ jobs:
         shell: bash
     steps:
       - name: Require independent host identity verification
+        # The pinned fingerprint has been independently verified with DreamHost.
+        # Push runs need no dispatch input; every run still checks the actual key.
+        if: github.event_name == 'workflow_dispatch'
         env:
           VERIFIED: ${{ inputs.host_key_verified }}
         run: |
