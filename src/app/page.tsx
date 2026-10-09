@@ -1,3 +1,4 @@
+import { ONCURVE_BASE_PATH } from "@/config/site";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -98,7 +99,7 @@ function HowItWorks() {
           <div className="how-product-art">
             <Image
               className="how-phone-image"
-              src="/IphoneHeadeRightWhiteSmall.png"
+              src={`${ONCURVE_BASE_PATH}/IphoneHeadeRightWhiteSmall.png`}
               alt="ONCurve clinical trial comparison chart with weight progress, trial reference lines, and current weight, total loss, and below-trial statistics"
               width={1499}
               height={2449}
@@ -117,7 +118,7 @@ function HowItWorks() {
 
 function AppStoreBadge() {
   return (
-    <Image className="app-store-badge" src="/app-store-badge.svg" alt="Download on the App Store" width={119.66407} height={40} unoptimized />
+    <Image className="app-store-badge" src={`${ONCURVE_BASE_PATH}/app-store-badge.svg`} alt="Download on the App Store" width={119.66407} height={40} unoptimized />
   );
 }
 
@@ -126,7 +127,7 @@ function HeroProductArt() {
     <div className="hero-product-art">
       <Image
         className="hero-phone hero-phone-left"
-        src="/IphoneHeaderLeftSmall.png"
+        src={`${ONCURVE_BASE_PATH}/IphoneHeaderLeftSmall.png`}
         alt="ONCurve welcome screen on an iPhone"
         width={1479}
         height={2443}
@@ -134,7 +135,7 @@ function HeroProductArt() {
       />
       <Image
         className="hero-phone hero-phone-right"
-        src="/IphoneHeaderRightSmall.png"
+        src={`${ONCURVE_BASE_PATH}/IphoneHeaderRightSmall.png`}
         alt="Connect your weight data screen on an iPhone"
         width={1495}
         height={2453}
@@ -142,7 +143,7 @@ function HeroProductArt() {
       />
       <Image
         className="hero-phone hero-phone-center"
-        src="/IphoneHeaderCenterSmall.png"
+        src={`${ONCURVE_BASE_PATH}/IphoneHeaderCenterSmall.png`}
         alt="John’s Snapshot showing weight progress and clinical trial comparisons on an iPhone"
         width={1216}
         height={2434}
@@ -183,7 +184,7 @@ export default function Home() {
           <Link className="brand" href="/" aria-label="ONCurve home">
             <Image
               className="brand-logo"
-              src="/OnCurveLogo.svg"
+              src={`${ONCURVE_BASE_PATH}/OnCurveLogo.svg`}
               alt="ONCurve"
               width={4120}
               height={826}

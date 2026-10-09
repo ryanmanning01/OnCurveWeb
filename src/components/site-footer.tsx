@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ONCURVE_CONTACT_EMAIL } from "@/config/site";
+import { ONCURVE_BASE_PATH, ONCURVE_CONTACT_EMAIL } from "@/config/site";
 import CopyrightYear from "@/components/copyright-year";
 
 function EmailLink({ children, subject }: { children: React.ReactNode; subject: string }) {
@@ -23,7 +23,7 @@ export default function SiteFooter() {
       <div className="footer-layout page-width">
         <div className="footer-branding">
           <Link className="footer-brand" href="/" aria-label="ONCurve home">
-            <Image className="footer-logo" src="/OnCurveLogo.svg" alt="ONCurve" width={4120} height={826} unoptimized />
+            <Image className="footer-logo" src={`${ONCURVE_BASE_PATH}/OnCurveLogo.svg`} alt="ONCurve" width={4120} height={826} unoptimized />
           </Link>
           <p className="footer-tagline">Real Progress. Real Perspective.</p>
         </div>
