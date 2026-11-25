@@ -91,7 +91,9 @@ export default function SiteHeader() {
         </Link>
         <nav className="site-nav" aria-label="Main navigation">{links(false)}</nav>
         <div className="header-cta">
+          <a href="https://apps.apple.com/us/app/oncurve/id6819850007" aria-label="Download ONCurve on the App Store">
           <Image className="app-store-badge" src={`${ONCURVE_BASE_PATH}/app-store-badge.svg`} alt="Download on the App Store" width={119.66407} height={40} unoptimized />
+          </a>
         </div>
       </header>
       <dialog ref={dialog} id="mobile-navigation" className="navigation-dialog" aria-label="Main navigation" onCancel={(event) => { event.preventDefault(); closeMenu(); }} onClose={() => { releaseScroll.current?.(); setOpen(false); }} onKeyDown={(event) => {

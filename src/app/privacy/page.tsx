@@ -38,7 +38,7 @@ export default function PrivacyPage() {
           <h2 id="health-access-heading">Read-only Apple Health access</h2>
           <p>Connecting Apple Health is optional. With your permission, ONCurve can read supported weight measurements as an alternative to manually logging weight. Its access is read-only: ONCurve does not write or delete records in Apple Health.</p>
           <p>You choose whether to grant access through Apple&apos;s permission controls and can review or revoke that access in Apple Health or your device settings. You can continue to enter measurements manually without connecting Apple Health.</p>
-          <p>Revoking permission controls future access. To remove information already stored locally by ONCurve, use the app&apos;s data deletion controls described below.</p>
+          <p>Revoking Apple Health permission prevents ONCurve from accessing additional Health data. Measurements retrieved from Apple Health are used to display your progress and are not permanently copied into ONCurve&apos;s local weight log. Information you enter directly into ONCurve can be removed using the app&apos;s data deletion controls described below.</p>
         </section>
         <section aria-labelledby="deletion-heading">
           <h2 id="deletion-heading">Managing and deleting your data</h2>
